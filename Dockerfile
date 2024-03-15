@@ -1,17 +1,30 @@
-FROM nikolaik/python-nodejs:latest
+# Stage 1: Build the React application
+FROM nikolaik/python-nodejs:latest as build-stage
 
-# Declaring env
-ENV NODE_ENV development
+# Set environment to production
+ENV NODE_ENV production
 
-# Setting up the work directory
-WORKDIR /react-app
+# Set the working directory
+WORKDIR /app
 
-# Installing dependencies
-COPY ./package.json /react-app
-RUN npm install -f
+# Copy the package.json and install dependencies
+COPY package*.json ./
+RUN npm install --production
 
-# Copying all the files in our project
+# Copy the rest of your app's source code
 COPY . .
 
-# Starting our application
-CMD npm start
+# Build your React application
+RUN npm run build
+
+# Stage 2: Serve the app with Nginx
+FROM nginx:stable-alpine as production-stage
+
+# Copy the built app from the previous stage
+COPY --from=build-stage /app/build /usr/share/nginx/html
+
+# Expose port 80
+EXPOSE 80
+
+# Start Nginx and serve the static files
+CMD ["nginx", "-g", "daemon off;"]
