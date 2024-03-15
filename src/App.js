@@ -1,24 +1,39 @@
 import logo from './logo.svg';
 import './App.css';
+import SignupFirstPage from './pages/SignupFirstPage';
+import SignupSecondPage from './pages/SignupSecondPage';
+import OnbordingPage from './pages/OnboardingPage';
+import SigninPage from './pages/SigninPage';
+import {BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import EmailConfirmationPage from './pages/EmailConfirmation'
+import ValidatedEmailPage from './pages/ValidatedEmail';
+import CandidateProfilePage from './pages/CandidateProfile';
+import RecruiterProfilePage from './pages/RecruiterProfile';
+import PrivateRoute from './PrivateRoute';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+    <Routes>
+      <Route path='/signup' element={<SignupFirstPage/>}/>
+   
+    
+      <Route path='/signin' element={<SigninPage/>}/>
+   
+  
+      <Route path='/emailconfirmation' element={<EmailConfirmationPage/>}/>
+  
+  
+      <Route path='/emailverified/:token' element={<ValidatedEmailPage/>}/>
+   
+
+    <Route path='/candidateprofile' element={<PrivateRoute component={CandidateProfilePage} />} />
+   
+
+   
+      <Route path='/recruiterprofile' element={<RecruiterProfilePage/>}/>
+    </Routes>
+   </Router>   
   );
 }
 

@@ -1,0 +1,108 @@
+.main{
+    background-color: #f2f0f6;
+}
+
+.fixednavbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100; /* Ensures the navbar stays on top of other content */
+  }
+
+  .profileimg{
+    width: 25%;
+  }
+  .btns {
+    background-color: #f0f0ff;
+    color: #4f4fd8;
+    border-radius: 8px;
+    border: none;
+  }
+
+  .testleft{
+    height: auto;
+    width:100%;
+    margin-bottom: 5%;
+  }
+
+  .tt{
+   text-align: right;
+  }
+
+  .submit{
+    margin-top: 10px;
+    width: 90%;
+    text-align: center;
+    background-color: #0d3b66; 
+    color: white; 
+    border: none; 
+    font-size: 16px; 
+    font-weight: bold; 
+    border-radius: 8px; 
+    cursor: pointer;
+    outline: none; 
+}
+.content{
+    height: 20px; 
+    background-color: #000;
+}
+.inputs{
+    border-radius: 8px;
+    border: none;
+    height: 40px;
+    border: 1px solid #cddff0;
+}
+
+/* Basic reset for styles */
+.toggle input[type="radio"] {
+    display: none; /* Hide radio button */
+  }
+  
+  .toggle label {
+    border: 1px solid #ccc; /* Border color */
+    padding: 10px 20px; /* Padding for labels */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-right: 5px; /* Margin between labels */
+    background-color: white;
+    height: 40px;
+
+
+  }
+  
+  /* Style for when a radio button is checked */
+  .toggle input[type="radio"]:checked + label {
+    background-color: white; /* Background color for checked state */
+    color: blue; /* Text color for checked state */
+    border: 1px solid blue;
+    height: 40px;
+
+  }
+  .maincontent{
+    width:90%;
+    margin-left: 5%;
+  }
+  .infos{
+    width:100%;
+  }
+
+  @media (min-width: 576px) {
+    .maincontent{
+      width:90%;
+    }
+    .testleft{
+      width: 25%;
+      margin-left: 0%;
+    }
+    .infos{
+      width: 70%;
+      margin-left: 5%;
+    }
+    .test{
+      margin-left: 0%;
+    }
+    .submit{
+      width: 10%;
+    }
+  }

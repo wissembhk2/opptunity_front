@@ -1,0 +1,44 @@
+.main{
+    background-color: #f2f0f6;
+    height: 100vh;
+}
+
+.fixednavbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100; /* Ensures the navbar stays on top of other content */
+  }
+
+.type{
+    background-color: #f3effd;
+    color: #673de6 ; 
+    border : 1px solid #673de6 ;
+    text-align: center;
+}
+.infos{
+    width: 90%;
+    margin-left: 5%;
+}
+.title{
+    color : #7048e8;
+}
+
+
+.detail{
+    width: 100%;
+}
+
+@media (min-width: 576px) {
+    .detail{
+        width: 50%;
+    }
+    .detailsicon{
+        width:10%;
+    }
+    .infos{
+        width: 60%;
+        margin-left: 20%;
+    }
+}

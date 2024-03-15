@@ -1,0 +1,63 @@
+.main {
+  background-color: none;
+}
+
+
+.main h1 {
+  color:white;
+  margin-left:5%;
+  font-family: Poppins;
+font-size: 38px;
+font-weight: 500;
+line-height: 60px;
+text-align: left;
+
+
+}
+
+.logo{
+  box-sizing: border-box;
+ 
+  margin-bottom: 5%;
+  margin-left:30%;
+  background-image: url('../../assets/blacklogo.svg');
+  width: 24.8%;
+  height: 10vh;
+  background-size: 100% 100%;   /* Cover the entire div area */
+  background-position: center; /* Center the background image */
+
+}
+.images{
+  margin-left:10%;
+  max-height: 60%;
+  overflow: auto;
+  width: 60%;
+  box-sizing: border-box;
+  margin-top:10%;
+  justify-content: space-between;
+}
+.images img {
+  max-width: 47%;
+  min-width: 47%;
+  box-sizing: border-box;
+   /* Prevents the image from exceeding the container's height */
+
+}
+
+@media (min-width: 576px) {
+
+  .logo{
+    margin-left:5%;
+    margin-top: 6%;
+    margin-bottom: 10%;
+    background-image: url('../../assets/logo.svg');
+
+    box-sizing: border-box;
+
+  }
+}
+
+
+
+
+   

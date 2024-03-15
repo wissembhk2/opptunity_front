@@ -1,0 +1,107 @@
+h1{
+    font-size: 32px;
+}
+.signupsection{
+    width: 90%;
+    background-color: white;
+    border-radius: 8px;
+    margin-left: 5%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 90%;
+   
+}
+
+
+.signupsection >p {
+    width: 100%;
+    font-size: 18px;
+}
+.signupsection  table tr td input{
+    margin-top: 10px;
+    box-sizing: border-box;
+    width: 90%;
+    border: 1px solid #ccc; 
+    background-color: #f8fafc;
+    border-radius: 8px; 
+
+    font-size: 16px;    
+}
+
+
+.submit{
+    margin-top: 10px;
+    width: 90%;
+
+    background-color: #0d3b66; 
+    color: white; 
+    border: none; 
+    font-size: 16px; 
+    font-weight: bold; 
+    border-radius: 8px; 
+    cursor: pointer;
+    outline: none; 
+}
+.socialsignup div {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+
+  .socialsignup {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+   input[type="text"],
+   input[type="email"],
+   input[type="password"],
+   button,
+  .socialsignup button {
+    margin-bottom: 10px;
+    padding: 10px;
+    margin-right: 10px;
+  }
+  
+  .socialsignup button.socialmediasignup {
+    color: black;
+    display: flex;
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 8px;
+    width: 40%;
+    margin-top: 3%;
+  }
+  .socialmediasignup img{
+    width: 30px;
+    height: 30px;
+  }
+.socialsignup p {
+    margin-left: 45%;
+    margin-top: 5%;
+}
+  
+  .loginredirect a {
+    text-decoration: none;
+    color: #0000EE; /* Classic link blue */
+    margin-top: 3%;
+  }
+  @media (min-width: 576px) {
+    .signupsection{
+      padding-left: 5%;
+      margin-top: 3%;
+      padding-top:5%;
+      box-sizing: border-box;
+     
+
+    }
+    .signupsection >p {
+        width: 50%;
+        font-size: 18px;
+    }
+  }
