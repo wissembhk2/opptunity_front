@@ -1,6 +1,5 @@
 # Stage 1: Build the React application
-FROM nikolaik/python-nodejs:latest as build-stage
-
+FROM node:alpine as build-stage
 # Set environment to production
 ENV NODE_ENV production
 

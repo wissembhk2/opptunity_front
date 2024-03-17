@@ -10,6 +10,7 @@ import ValidatedEmailPage from './pages/ValidatedEmail';
 import CandidateProfilePage from './pages/CandidateProfile';
 import RecruiterProfilePage from './pages/RecruiterProfile';
 import PrivateRoute from './PrivateRoute';
+import CvTemplate from './pages/CvTemplate';
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
    
     
       <Route path='/signin' element={<SigninPage/>}/>
-   
+      <Route path='/cv' element={<CvTemplate/>}/>
+
   
       <Route path='/emailconfirmation' element={<EmailConfirmationPage/>}/>
   
